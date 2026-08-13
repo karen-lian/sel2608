@@ -123,7 +123,7 @@ header{padding-top:clamp(24px,4vw,44px);}
   font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;}
 
 /* ══════════ line art ══════════ */
-.art{margin:clamp(4px,1.5vw,14px) 0 0;}
+.art{margin-top:clamp(4px,1.5vw,14px);}
 .art svg{display:block;width:100%;height:auto;color:var(--ink);}
 .art .st{fill:none;stroke:var(--ink);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;}
 .art .thin{stroke-width:.6;}
@@ -550,7 +550,7 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
       <div class="alert"><b>你 23:45 進場算「夜場」（20:00–06:00 進場），6 小時是 ₩28,000（約 NT$636）</b>——不是日場的 ₩22,000。我先前寫的 ₩11,000 是「只沖澡 2 小時」的價格，不含休息，那個數字對你的用法是錯的。夜場 12 小時 ₩38,000，你用不到。</div>
       <div class="alert"><b>先到先得、無法預約，用置物櫃感應手環進出。</b>攻略也提到航班超過 20:00 抵達時汗蒸幕容易排隊、容易客滿——你 23:38 到，就是在那個時段裡。<b>這件事沒有辦法事先解決，只能早點到、有位就進。</b></div>
       <div class="alert"><b>沒位子就睡機場，但要知道睡哪裡。</b>免費的 Nap Zone／Relax Zone 在<b>登機口附近，也就是安檢後的管制區</b>——你 05:55 才報到、之後才過得了安檢，等於整晚都用不到。真的客滿，你的落腳處是 <b>B1 交通中心一帶的長椅</b>，沒有毯子也沒有淋浴。</div>
-      <div class="alert">◐ 另一個備案：<b>閣樓休（다락휴）T2</b> 膠囊旅館，也在 <b>B1 交通中心東側</b>，營業 18:30–08:30。◐ 價格、當晚有沒有空房、能不能現場入住我都沒查證。<b>如果你不想賭汗蒸幕，這是唯一能事先訂的選項，值得出發前查一下。</b></div>
+      <div class="alert"><b>閣樓休 T2 已經沒房</b>，所以沒有能事先訂的替代方案。8/28 就是賭現場——<b>帶外套或大披肩＋眼罩耳塞</b>，沒位子時長椅整夜吹冷氣。</div>
     </article>
   </div>
 </section>
@@ -636,7 +636,7 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
         <li class="stop together"><time class="num">17:30</time><div class="body">台中 RMQ T1 起飛 · 真航空 LJ738<span class="note">飛行 2 小時 45 分。國際線建議 15:30 到機場報到。</span></div></li>
         <li class="stop together"><time class="num">21:15</time><div class="body">抵達 仁川機場 T2<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=Incheon%20International%20Airport%20Terminal%202" target="_blank" rel="noopener">Map</a></div></li>
         <li class="stop"><time class="num">21:15–22:15</time><div class="body">入境、領行李、買 T-money 並儲值<span class="note">抓 60 分是估的：晚班廉航尖峰時段的入境隊伍。順利的話 40 分就出得來。</span></div></li>
-        <li class="stop"><time class="num">22:33</time><div class="body">搭 AREX 一般列車 → 弘大入口站<span class="note">₩5,250（約 NT$119），車程 58 分，23:31 到。<b>沒有 22:30 那班</b>——實際是 22:22 或 22:33，看你幾點出關。</span></div>
+        <li class="stop"><time class="num">22:33</time><div class="body">搭 AREX 一般列車 → 弘大入口站<span class="note">₩5,250（約 NT$119），車程 58 分，23:31 到。<b>沒有 22:30 那班</b>——實際是 22:22 或 22:33，看你幾點出關。</span>
           <div class="fork">
             <p>T2 → 弘大入口 · 晚間班次（官網 · 僅列藍色可搭班次）</p>
             <div><span>21:43</span>22:41 到 · 出關超順的話趕得上</div>
@@ -647,21 +647,18 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
             <div><span>22:57</span>23:55 到</div>
             <div><span>23:13</span>00:11 到</div>
             <div><span>23:32</span>00:30 到 · <b>末班車</b>（23:50 是灰色的，到不了）</div>
-          </div>
+          </div></div>
         </li>
         <li class="stop"><time class="num">23:30</time><div class="body">弘大入口站 → 走路約 10 分到民宿<span class="note">約 700 公尺。深夜走這段沒問題，弘大一帶整晚都有人。</span></div></li>
         <li class="stop together"><time class="num">23:45</time><div class="body">入住 首爾 Papa 民宿<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%84%9C%EC%9A%B8%20%ED%8C%8C%ED%8C%8C%20%EA%B2%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EC%9A%B0%EC%8A%A4" target="_blank" rel="noopener">Map</a></div></li>
         <li class="stop"><time>今晚</time><div class="body">不跳舞<span class="note">週二本來就是你排定的休息夜，而且落地就快半夜了。</span></div></li>
       </ul>
-      <div class="alert"><b>出關後先看時間，再決定往哪個方向走</b>——不要先衝去月台才發現沒車。三條路的死線各不相同，而且<b>巴士比火車還早收班</b>。</div>
-      <div class="fork">
-        <p>8/25 出關太晚怎麼回弘大</p>
-        <div><span>A</span>出關 &lt; 23:10 · 兩個都行，AREX 較快（58 分）也較便宜 ₩5,250<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=Incheon%20Airport%20Terminal%202%20AREX%20station" target="_blank" rel="noopener">Map</a></div>
-        <div><span>B</span>出關 23:10–23:32 · 只剩 AREX，6002 巴士已收班，直接衝月台</div>
-        <div><span>C</span>出關 23:32–00:00 · AREX 與 6002 都收班，N6002 還沒開，只能計程車 ₩70,000–90,000（約 NT$1,600–2,050）</div>
-        <div><span>D</span>出關 &gt; 00:00 · N6002 深夜機場巴士到弘大一帶 · ₩17,000（約 NT$386）</div>
-      </div>
-      <div class="alert"><b>AREX 的班次是官網數據，可以照著走</b>（末班 23:32，且只看藍色班次）。◐ <b>巴士的時刻是二手資料，夏季／冬季會調整</b>：6002 從 T2 末班約 <b>23:10</b>、N6002 從 T2 發車 <b>23:40 / 00:10 / 00:40 / 01:20 / 03:40 / 04:20</b>（₩17,000）。<b>真的要搭巴士，落地後在入境大廳的站牌再對一次當日時刻。</b></div>
+      <div class="alert"><b>決策點 · 出關時間決定搭什麼</b><br>
+        &lt;23:10 → AREX 或 6002 都行<br>
+        23:10–23:32 → 只剩 AREX，直接衝月台<br>
+        23:32–00:00 → 只能計程車 ₩70,000–90,000<br>
+        &gt;00:00 → N6002 深夜巴士 ₩17,000</div>
+      <div class="alert">◐ 巴士時刻是二手資料，落地在站牌再對一次。AREX 照官網走即可。</div>
     </article>
 
     <article class="day rv" id="d0826">
@@ -685,30 +682,34 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
         <li class="stop together"><time class="num">20:00–22:00</time><div class="body">Social Dance · 1920–40 年代爵士<span class="note">Swingpop × Dialogue 的復古主題夜。韓國人與外國人混合的社群，辦了十年以上，對新手友善。</span></div></li>
         <li class="stop"><time class="num">22:10</time><div class="body">回連南洞<span class="note">綠莎坪 →（6 號線）合井 → 轉 2 號線一站到弘大入口，約 35–40 分。地鐵末班在午夜過後，22:00 散場不趕。</span></div></li>
       </ul>
-      <div class="alert">景福宮<b>週二公休</b>。8/26 是週三，這天沒問題——但如果之後行程往前挪一天就會撲空，改期時記得回來看這行。</div>
-      <div class="alert"><b>挑韓服方案不用為了時數加錢。</b>你 09:00 到店、13:35 一定要離開，實際佔用約 <b>4 小時 35 分</b>。「4 小時方案＋贈 1 小時＝5 小時」就夠用而且有餘裕；<b>卡住你的是 14:30 的診所，不是租借時數</b>，升級成全日方案那多出來的時間你根本用不到。</div>
-      <div class="alert"><b>醫美預算：目標 TWD 6,000 內（約 ₩264,000），絕對上限 ₩300,000（約 TWD 6,800）。</b>優先順序是<b>法令紋＋嘴邊肉下垂的拉提</b>，痘印其次。海芙音波本來就是做拉提的，方向沒錯——但諮詢時一定會被推加購，<b>先把上限講出來再讓對方報方案</b>，不要等他報完才殺價。韓文怎麼說見「當地 → 醫美諮詢」。</div>
-      <div class="alert">Creatrip 明寫：<b>無法前往一定要提前取消，否則可能被店家列入黑名單。</b>真的要改時間就上 App 改，不要直接不去。</div>
-      <div class="alert"><b>入場費含的那杯調酒，先問過診所再喝。</b>你是同一天下午做完海芙音波、晚上就去跳舞——音波拉提後當天飲酒常見的建議是避開，因為可能加重紅腫。這不是醫囑，是提醒你<b>14:30 諮詢時順口問一句</b>（「오늘 술 마셔도 돼요?」＝今天可以喝酒嗎）。不能喝的話那杯就換無酒精的，或送給舞伴。</div>
-      <div class="alert"><b>今天是全程最滿的一天，而且沒有回住處的空檔。</b>早上 09:00 換韓服，晚上 22:00 才從解放村往回走，中間隨身物品要背一整天。<b>後背包＋好走的鞋</b>，韓服拍照要帶的東西跟晚上跳舞要帶的東西一次帶齊。</div>
+      <div class="alert"><b>決策點</b><br>
+        韓服挑 4 小時＋贈 1 小時方案就夠，<b>13:35 一定要離店</b><br>
+        醫美：一開口就講 <b>上限 ₩300,000</b>，再讓對方報方案<br>
+        入場含的那杯調酒：<b>14:30 諮詢時問診所今天能不能喝</b><br>
+        今天不回住處，早上出門就把晚上跳舞要用的東西帶齊</div>
     </article>
 
     <article class="day rv" id="d0827">
-      <div class="day-head"><span class="day-num num">8/27</span><span class="day-dow">Thu</span><span class="day-title">南怡島一日 · 弘大第二夜</span></div>
+      <div class="day-head"><span class="day-num num">8/27</span><span class="day-dow">Thu</span><span class="day-title">南怡島一日 · 18:00 回住處梳洗</span></div>
       <ul class="stops">
-        <li class="stop"><time class="num">07:40</time><div class="body">起床、出發<span class="note">今天是全程唯一要早起的一天。</span></div></li>
+        <li class="stop"><time class="num">07:40</time><div class="body">起床、出發<span class="note">今天是全程唯一要早起的一天，也是唯一有回程硬底線的一天。</span></div></li>
         <li class="stop"><time class="num">08:10</time><div class="body">前往龍山站搭 ITX-청춘<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%9A%A9%EC%82%B0%EC%97%AD" target="_blank" rel="noopener">Map</a><span class="note">弘大入口 → 龍山站 約 20–25 分。ITX-청춘 是<b>全車指定席</b>，要先在 Korail App 訂位，沒訂到位子不能上車。</span></div></li>
         <li class="stop pending"><time class="num">09:00</time><div class="body">ITX-청춘 龍山 → 加平<span class="note">◐ <b>班次時刻要自己訂了才知道</b>，這裡的 09:00 是為了 10:30 上島回推的。車程約 55–60 分，車資約 ₩6,000（查到的說法在 ₩4,800–8,500 之間浮動，以實際訂票為準）。</span></div></li>
         <li class="stop"><time class="num">10:05</time><div class="body">加平站 → 南怡島渡船口<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B0%80%ED%8F%89%EC%97%AD" target="_blank" rel="noopener">Map</a><span class="note">計程車 ₩5,000（約 NT$114）／約 5 分，或加平循環觀光巴士一日券 ₩6,000（約 NT$136）。趕時間就搭計程車。</span></div></li>
         <li class="stop"><time class="num">10:20</time><div class="body">在渡船口買南怡島船票＋入場券<span class="note"><b>船票要在現場另外買，火車票不含。</b>₩19,000（約 NT$432）的入場券已含來回渡輪，所以只要買這一張，不用再單買船票。渡輪 5 分鐘一趟、尖峰 10–20 分一班。</span></div></li>
         <li class="stop"><time class="num">10:35</time><div class="body">上島<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%82%A8%EC%9D%B4%EC%84%AC" target="_blank" rel="noopener">Map</a></div></li>
-        <li class="stop"><time class="num">10:35–16:30</time><div class="body">水杉林道、湖畔、租腳踏車<span class="note">走完主要景點抓 3–4 小時，慢慢晃可以待 5 小時以上。島上有餐廳，午餐在島上解決。</span></div></li>
-        <li class="stop"><time class="num">16:30</time><div class="body">搭渡輪回本島 → 加平站</div></li>
-        <li class="stop pending"><time class="num">17:15</time><div class="body">ITX-청춘 加平 → 龍山<span class="note">◐ <b>回程班次同樣要先訂。</b>去程訂票時就把回程一起訂掉，不要留到島上再處理——島上訊號不一定好，而且熱門時段會賣完。</span></div></li>
-        <li class="stop"><time class="num">18:40</time><div class="body">回到弘大一帶、晚餐</div></li>
+        <li class="stop"><time class="num">10:35–15:50</time><div class="body">水杉林道、湖畔、租腳踏車<span class="note">約 5 小時 15 分，走完主要景點綽綽有餘。島上有餐廳，午餐在島上解決。</span></div></li>
+        <li class="stop"><time class="num">15:50</time><div class="body">離島 · 搭渡輪回本島<span class="note">渡輪 5 分鐘一趟。</span></div></li>
+        <li class="stop"><time class="num">16:20</time><div class="body">抵達加平站<span class="note">渡船口 → 加平站 計程車 ₩5,000（約 NT$114）／約 5 分。</span></div></li>
+        <li class="stop pending"><time class="num">16:35</time><div class="body">ITX-청춘 加平 → 龍山<span class="note">◐ <b>訂去程時一起訂回程。</b>約 60 分，17:35 到龍山。</span></div></li>
+        <li class="stop"><time class="num">17:35</time><div class="body">龍山站 → 弘大入口<span class="note">京義中央線直達，約 15 分。</span></div></li>
+        <li class="stop together"><time class="num">18:00</time><div class="body">回到民宿 · 洗澡換衣服<span class="note"><b>今天的硬底線。</b>整天在戶外，出門跳舞前要梳洗。</span></div></li>
+        <li class="stop"><time class="num">19:30</time><div class="body">出門、晚餐</div></li>
         <li class="stop pending"><time class="num">21:00</time><div class="body">Latin dance 第二夜<span class="note">◐ <b>Club Bonita 或 Hong Turn Salsa Club 二選一，兩家都要 8/19 之後才公布場次。</b>今晚沒有硬底線，可以待晚一點——真正要卡時間的是明天。</span></div></li>
       </ul>
-      <div class="alert">南怡島渡輪<b>營運到 21:00</b>，但你的限制不是船，是火車。<b>ITX-청춘 全車指定席，回程沒訂到位就上不了車</b>——在加平站等下一班可能是一小時起跳，而你今晚還要跳舞。訂去程時就把回程一起訂掉。</div>
+      <div class="alert"><b>決策點</b><br>
+        <b>18:00 前要回到住處</b>——回推：南怡島 15:50 離開、加平 16:35 上車<br>
+        ITX 全車指定席，<b>回程一定要跟去程一起訂</b>，現場買不到</div>
     </article>
 
     <article class="day rv" id="d0828">
@@ -716,14 +717,14 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
       <ul class="stops">
         <li class="stop"><time class="num">10:00</time><div class="body">整理行李、打包<span class="note">今天之後就沒有房間了，東西一次收乾淨。</span></div></li>
         <li class="stop together"><time class="num">11:00</time><div class="body">退房，行李寄放民宿<span class="note"><b>退房是 11:00 前，不是 11:00</b>。寄放要事前跟民宿說一聲，並問清楚<b>最晚幾點可以回來拿</b>——你要 22:00 之後才會回來。</span></div></li>
-        <li class="stop"><time class="num">11:00–14:00</time><div class="body">自由時段<span class="note">三個小時，挑一到兩個，不要排滿——下午的硬底線在 15:10。</span></div>
+        <li class="stop"><time class="num">11:00–14:00</time><div class="body">自由時段<span class="note">三個小時，挑一到兩個，不要排滿——下午的硬底線在 15:10。</span>
           <div class="fork">
             <p>這段可以做什麼</p>
             <div><span>01</span>Olive Young 弘大店 · 補貨最順路的一家<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20%ED%99%8D%EB%8C%80" target="_blank" rel="noopener">Map</a></div>
             <div><span>02</span>인생네컷／포토이즘 拍貼 · 弘大街上到處都是，不用預約<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%9D%B8%EC%83%9D%EB%84%A4%EC%BB%B7%20%ED%99%8D%EB%8C%80" target="_blank" rel="noopener">Map</a></div>
             <div><span>03</span>連南洞咖啡廳辦公 · 走回住處那條巷子就有一整排<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%97%B0%EB%82%A8%EB%8F%99%20%EC%B9%B4%ED%8E%98" target="_blank" rel="noopener">Map</a></div>
             <div><span>04</span>廣藏市場 · 綠豆煎餅 ₩5,000（約 NT$114）、生牛肉、麻藥飯捲<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B4%91%EC%9E%A5%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener">Map</a></div>
-          </div>
+          </div></div>
         </li>
         <li class="stop"><time class="num">14:20</time><div class="body">出發往忠武路<span class="note">連南洞 → 명보극장 抓 <b>40 分</b>（地鐵約 35 分＋走路）。這是推估值，不是查表——用 Naver Map 當天再確認一次。</span></div></li>
         <li class="stop together"><time class="num">15:10</time><div class="body">抵達 명보극장 B1 · WILDWILD 專用館<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%AA%85%EB%B3%B4%EA%B7%B9%EC%9E%A5%20%EB%A7%88%EB%A5%B8%EB%82%B4%EB%A1%9C%2047" target="_blank" rel="noopener">Map</a><span class="note">首爾市中區 마른내로 47。票券要求<b>提早 60 分鐘（15:00）</b>到場，你抓 15:10 已經比規定晚 10 分，路上不要再拖。</span></div></li>
@@ -736,9 +737,12 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
         <li class="stop"><time class="num">22:25</time><div class="body">進站取行李<span class="note">從弘大主要舞場走到弘大入口站抓 10 分，取櫃再抓 5 分。</span></div></li>
         <li class="stop together"><time class="num">22:40</time><div class="body">弘大入口站 搭 AREX → 仁川 T2<span class="note">車程 <b>58 分</b>，₩5,250（約 NT$119）。<b>這是「6 小時汗蒸幕」的目標車，不是末班車</b>（末班 23:48）。</span></div></li>
         <li class="stop together"><time class="num">23:38</time><div class="body">抵達 仁川 T2<span class="note">22:40 發車 ＋ 58 分。走到 B1 西側約 5 分。</span></div></li>
-        <li class="stop pending"><time class="num">23:45</time><div class="body">스파앳홈 T2 入場（B1 西側）· <b>6 小時起算</b><span class="note"><b>夜場 6 小時 ₩28,000（約 NT$636），先到先得不能預約。</b>有位就進，沒位就是 B1 長椅——<b>免費的 Nap Zone 在安檢後，你整晚都用不到</b>。休息室男女分開，選女性那間。</div></li>
+        <li class="stop pending"><time class="num">23:45</time><div class="body">스파앳홈 T2 入場（B1 西側）· <b>6 小時起算</b><span class="note"><b>夜場 6 小時 ₩28,000（約 NT$636），先到先得不能預約。</b>有位就進，沒位就是 B1 長椅——<b>免費的 Nap Zone 在安檢後，你整晚都用不到</b>。休息室男女分開，選女性那間。</span></div></li>
       </ul>
-      <div class="alert"><b>今晚的取捨很單純：汗蒸幕每多待 1 小時，就少跳 1 小時舞。</b>要在 스파앳홈 待滿 6 小時（23:45 進、05:45 出），就得搭 <b>22:40</b> 那班，也就是 <b>22:20 離場</b>。改搭 23:48 末班車的話 00:46 才到、00:55 才進得去，汗蒸幕<b>只剩約 4 小時 50 分</b>，但你多跳了一小時。<b>這是你的選擇，不是死線。</b></div>
+      <div class="alert"><b>決策點 · 幾點離場＝睡多久</b><br>
+        22:20 離場 → 22:40 車 → 汗蒸幕 <b>6 小時</b>（本行程預設）<br>
+        23:20 離場 → 23:48 末班 → 汗蒸幕 <b>4 小時 50 分</b>，多跳一小時<br>
+        誤末班 → N6002 ₩17,000，<b>多付 ₩11,750</b>，且 6 小時泡湯</div>
       <div class="fork">
         <p>弘大入口 → 仁川 T2 · 晚間班次（官網 · 僅列可搭的藍色班次）</p>
         <div><span>22:30</span>23:28 到 · 汗蒸幕 6 小時<b>再多 10 分鐘緩衝</b>，最保險</div>
@@ -750,14 +754,9 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
         <div><span>23:34</span>00:32 到 · 約 5 小時</div>
         <div><span>23:48</span>00:46 到 · <b>末班車</b>，約 4 小時 50 分</div>
       </div>
-      <div class="alert"><b>時刻表上只有藍色的班次能搭。</b>灰色的那些（22:24、23:25、23:58、00:08）到不了第二航廈——為什麼我沒查證，但可搭的就是藍色那幾班。<b>上面列的八班全部都是藍色的</b>，照著看不會錯。臨櫃或月台再確認終點站是「인천공항2터미널」更保險。</div>
-      <div class="alert"><b>最容易犯的錯：看到 23:58 或 00:08 還印在表上，以為 23:48 之後還有車。</b>那是灰色的，到不了 T2。<b>23:48 就是最後一班</b>，錯過只剩 N6002 深夜巴士。</div>
-      <div class="alert"><b>你說了回程一定搭 AREX 省錢，那 23:48 對你來說是「錢的死線」。</b>誤了不會回不去——還有 N6002 深夜機場巴士（清涼里～光化門～<b>弘大入口</b>～仁川機場）——但票價 <b>₩17,000</b> 對 AREX 的 <b>₩5,250</b>，<b>等於多付 ₩11,750（約 NT$267）</b>。要早走是為了睡覺跟省這筆錢，不是為了保命。</div>
-      <div class="alert">最後手段才是計程車 <b>₩70,000–90,000（約 NT$1,600–2,050）</b>。三個選項的價差很清楚：<b>AREX ₩5,250 → 深夜巴士 ₩17,000 → 計程車 ₩70,000 起</b>。每晚一步，貴一個級距。</div>
-      <div class="alert">◐ <b>弘大入口往機場方向的 N6002 發車時刻我沒查到。</b>查得到的只有反方向（機場→首爾）的班表。<b>出發前上 airportlimousine.co.kr 查「홍대입구 → 인천공항」的深夜班次並抄下來</b>，順便確認站牌位置——機場巴士站牌跟地鐵站出口不是同一個地方。查到之前，把它當成「應該有但不確定幾點」的備案，不要拿它當計畫。</div>
-      <div class="alert">巴士也比火車慢（約 70–80 分，AREX 是 58 分），而且<b>汗蒸幕不能預約</b>。所以搭到巴士只是「趕得上飛機」，不保證「睡得到床」——你的 6 小時就別想了。</div>
-      <div class="alert">行李這條動線<b>整晚只有一個假設：弘大入口站有可用的寄物櫃。</b>18:40 那一格就是去驗證這件事的，驗證失敗就換回民宿方案——不要等到 22:25 才發現東西拿不出來。</div>
-      <div class="alert"><b>今晚的場地不能選在弘大以外。</b>整晚的動線是「散場走去弘大入口站取行李、22:40 上車」，走路 10 分鐘的距離才成立。8/19 場次公布後如果<b>只有梨泰院或江南那種遠場</b>，別硬去——那要多算 30–40 分車程，等於得 <b>21:40</b> 就離場，你今晚本來就只跳到 22:20，再砍一小時幾乎不用去了。<b>把近的排 8/28、遠的留給 8/27。</b></div>
+      <div class="alert"><b>只搭藍色班次。</b>22:24、23:25、23:58、00:08 是灰的，到不了第二航廈。</div>
+      <div class="alert"><b>18:40 先確認弘大入口站有空寄物櫃</b>——沒有就退回「行李留民宿」，跳完舞繞回連南洞拿。</div>
+      <div class="alert"><b>今晚場地必須在弘大</b>，遠場要 21:40 就離場，等於不用去。遠的排 8/27。</div>
     </article>
 
     <article class="day rv" id="d0829">
@@ -771,7 +770,7 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
         <li class="stop"><time class="num">07:25</time><div class="body">登機門<span class="note">T2 走到最遠的登機門要 15 分鐘以上，別在免稅店待到最後一刻。</span></div></li>
         <li class="stop together"><time class="num">07:55</time><div class="body">LJ735 起飛 → 台中 RMQ 09:40<span class="note">飛行 2 小時 45 分。</span></div></li>
       </ul>
-      <div class="alert">你的機票是<b>台中進、台中出</b>，不是桃園。回程落地 RMQ 之後回家的交通自己先想好，清晨九點多的台中機場接駁班次不密集。</div>
+      <div class="alert"><b>台中進、台中出，不是桃園。</b>RMQ 09:40 落地，回家交通先查好——清晨的台中機場接駁班次不密集。</div>
     </article>
   </div>
 </section>
@@ -917,18 +916,7 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
   </table>
   <p class="cost-note"><b>台灣有罰則：</b>在機上使用、充電，或超量攜帶且不配合勸導，依《民用航空法》處 <b>2 萬至 10 萬元</b>。這不是勸導性質的規定。</p>
 
-  <p class="mini-h">怎麼看容量 · mAh 換 Wh</p>
-  <p class="cost-note">航空規定只認 <b>Wh（瓦時）</b>，不是你習慣看的 mAh。換算公式：<b>Wh ＝ mAh ÷ 1000 × 電壓 V</b>。一般鋰電池標稱 3.7V，換算後：</p>
-  <table class="cost-tbl">
-    <tr><th>標示容量</th><th class="r">約等於</th></tr>
-    <tr><td>5,000 mAh</td><td class="r">18.5 Wh<small>可帶</small></td></tr>
-    <tr><td>10,000 mAh<small>最常見的尺寸</small></td><td class="r">37 Wh<small>可帶</small></td></tr>
-    <tr><td>25,000 mAh</td><td class="r">92.5 Wh<small>仍在 100Wh 以下</small></td></tr>
-    <tr><td>27,000 mAh</td><td class="r">99.9 Wh<small>非常接近上限</small></td></tr>
-  </table>
-  <p class="cost-note"><b>換句話說 27,000mAh 就是天花板</b>，超過就踩線。市面上絕大多數行動電源都在 10,000–20,000mAh，不用擔心。</p>
-  <div class="alert">◐ <b>100Wh 以上不要帶。</b>IATA 2026 旅客指引直接把超過 100Wh 列為禁止，雖然部分國家仍保留「101–160Wh 經航空公司核准」的做法，但<b>真航空對這一段的政策我沒查到</b>——為了一顆電池在櫃檯卡住不值得。超過 160Wh 則是一律禁止，沒有例外。</div>
-  <div class="alert"><b>標示看不清楚就會被攔，即使你自己算得出來。</b>機身要能辨識 Wh、mAh 或電壓；<b>貼紙脫落、標示磨損、外殼損壞或已經膨脹的，會被拒絕攜帶</b>。出發前把每顆翻過來看一遍——膨脹的那顆本來也該淘汰了。</div>
+  <div class="alert"><b>容量這關你不用管。</b>你最多帶到 20,000mAh（約 74Wh），離 100Wh 上限還很遠。真正會卡的是<b>數量（2 個）</b>與<b>標示</b>——出發前把每顆翻過來看一眼，<b>貼紙脫落、標示磨損、外殼損壞或已經膨脹的會被拒絕攜帶</b>，即使你算得出容量也一樣。</div>
   <div class="alert">順帶兩件同樣會在機場被攔的事：<b>暖暖包也不能託運</b>；<b>日本 EVE 止痛藥不能帶進韓國</b>（成分列管）。要帶止痛藥就帶普拿疼這類成分單純的。</div>
 
   <div class="tabbar-wrap" style="margin-top:var(--gap-major)">
@@ -1055,7 +1043,7 @@ html.js .rv .place:nth-child(n+5),html.js .rv .money>ul>li:nth-child(n+5),html.j
       <li><label class="chk"><input type="checkbox" data-todo="clinic-receipt"><span class="box"></span><span class="txt">醫美結帳拿收據，30 天內上傳拿 10% 回饋<small>要先把 Creatrip 預約狀態改成「使用完成」再上傳收據＋寫評價，順序反了領不到。</small></span></label></li>
       <li><label class="chk"><input type="checkbox" data-todo="cash"><span class="box"></span><span class="txt">依「OTENA 收不收卡」決定要換多少韓元<small>韓國<b>沒有最低現金規定</b>（只有超過 USD 10,000 要申報，你離很遠）。但收卡的話帶 ₩100,000–150,000 就夠，不收卡要多備約 ₩300,000——那不是落地後臨時領得順的金額。</small></span></label></li>
       <li><label class="chk"><input type="checkbox" data-todo="clinic-pay"><span class="box"></span><span class="txt">確認 OTENA 收不收海外信用卡<small>這是全程最大一筆現場支出。不收卡的話要先換好約 ₩300,000 現金，落地當天才發現就來不及了。</small></span></label></li>
-      <li><label class="chk"><input type="checkbox" data-todo="spa-rate"><span class="box"></span><span class="txt">查閣樓休（다락휴）T2 能不能事先訂<small>汗蒸幕費率已確定（夜場 6 小時 ₩28,000），但<b>先到先得不能預約</b>，客滿就只能睡 B1 長椅。閣樓休膠囊旅館同樣在 B1 東側、18:30–08:30 營業，<b>如果能事先訂，那是唯一能免掉這場賭注的方法</b>。查價格與訂法。</small></span></label></li>
+      <li><label class="chk"><input type="checkbox" data-todo="spa-rate"><span class="box"></span><span class="txt">接受「汗蒸幕可能沒位」這件事，準備好備案<small>閣樓休已經沒房，所以沒有能事先訂的選項了——<b>8/28 就是賭現場有沒有位</b>。沒位就睡 B1 交通中心長椅，那就準備<b>外套或大披肩＋眼罩耳塞</b>，機場冷氣整夜開著。</small></span></label></li>
       <li><label class="chk"><input type="checkbox" data-todo="cancel-deadline"><span class="box"></span><span class="txt">8/20 18:00 前決定民宿留不留<small>過了這個時間取消要收至少 TWD 696。日期就在眼前，不要放著忘記。</small></span></label></li>
     </ul>
     <p class="chk-note">這裡放的是<b>會卡住別的事</b>的項目，不是所有雜事。每一條沒做完，後面都有東西會倒。</p>

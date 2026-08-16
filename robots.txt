@@ -1,0 +1,6 @@
+# 這份手冊不希望被搜尋引擎收錄。
+# 注意：GitHub Pages 專案站（karen-lian.github.io/sel2608/）的
+# robots.txt 並非網域根目錄的那一份，爬蟲不一定會採用。
+# 真正生效的是 index.html <head> 裡的 <meta name="robots" content="noindex">。
+User-agent: *
+Disallow: /

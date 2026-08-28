@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-mode="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>英文練習 · Seoul Trip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+html[data-mode="light"]{--ink:#14544A;--ink-rgb:20,84,74;--paper:#EBF0EC;}
+html[data-mode="dark"]{--ink:#7FD8C0;--ink-rgb:127,216,192;--paper:#061412;}
+:root{
+  --ink-85:rgba(var(--ink-rgb),.85);
+  --ink-60:rgba(var(--ink-rgb),.60);
+  --ink-38:rgba(var(--ink-rgb),.38);
+  --ink-18:rgba(var(--ink-rgb),.18);
+  --ink-08:rgba(var(--ink-rgb),.08);
+  --hair:.75px;
+  --gut:clamp(16px,5vw,48px);
+  --maxw:820px;
+  --navh:52px;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Bai Jamjuree","Noto Sans TC",system-ui,sans-serif;
+  font-weight:400;line-height:1.6;letter-spacing:.01em;
+  transition:background .3s ease,color .3s ease;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit;}
+.topbar{
+  position:sticky;top:0;z-index:20;background:var(--paper);
+  border-bottom:var(--hair) solid var(--ink-18);
+}
+.topbar-in{
+  max-width:var(--maxw);margin:0 auto;padding:12px var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.brand{font-family:"Bai Jamjuree",sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;}
+.brand small{display:block;font-family:"Noto Sans TC",sans-serif;font-weight:500;font-size:11px;letter-spacing:.02em;color:var(--ink-60);margin-top:2px;}
+.iconbtn{
+  width:34px;height:34px;border:1.4px solid var(--ink-38);border-radius:50%;
+  background:none;color:var(--ink);cursor:pointer;font-size:15px;
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.tabbar{
+  position:sticky;top:var(--navh);z-index:19;background:var(--paper);
+  border-bottom:var(--hair) solid var(--ink-18);
+  overflow-x:auto;scrollbar-width:none;
+}
+.tabbar::-webkit-scrollbar{display:none;}
+.tabbar-in{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);
+  display:flex;gap:2px;
+}
+.tabbar button{
+  font-family:"Bai Jamjuree",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.06em;
+  background:none;border:none;color:var(--ink-60);cursor:pointer;
+  padding:12px 12px;white-space:nowrap;border-bottom:2.4px solid transparent;
+  flex:none;
+}
+.tabbar button b{display:block;font-size:15px;}
+.tabbar button i{display:block;font-style:normal;font-size:9px;letter-spacing:.12em;margin-top:1px;}
+.tabbar button.on{color:var(--ink);border-bottom-color:var(--ink);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:22px var(--gut) 80px;}
+.panel{display:none;}
+.panel.on{display:block;}
+.sec-head{margin-bottom:16px;}
+.sec-head h2{font-family:"Noto Sans TC",sans-serif;font-weight:900;font-size:clamp(19px,3.4vw,24px);margin:0 0 4px;letter-spacing:.02em;}
+.sec-head p{margin:0;font-size:12.5px;color:var(--ink-60);}
+
+/* ── vocab ── */
+.catbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;position:sticky;top:calc(var(--navh) + 45px);background:var(--paper);padding:8px 0;z-index:5;}
+.catbar button{
+  font-family:"Noto Sans TC",sans-serif;font-size:11.5px;font-weight:700;
+  border:1.4px solid var(--ink-38);border-radius:999px;background:none;color:var(--ink-60);
+  padding:5px 12px;cursor:pointer;white-space:nowrap;
+}
+.catbar button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.cat-block{margin-bottom:28px;}
+.cat-block h3{
+  font-family:"Bai Jamjuree",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-60);margin:0 0 10px;
+  border-bottom:var(--hair) solid var(--ink-18);padding-bottom:6px;
+}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+.vcard{
+  border:1.4px solid var(--ink-18);border-radius:10px;padding:12px 13px;cursor:pointer;
+  min-height:88px;position:relative;background:var(--paper);
+  transition:border-color .15s ease;
+}
+.vcard:active{border-color:var(--ink);}
+.vcard .en{font-family:"Bai Jamjuree",sans-serif;font-weight:700;font-size:15px;line-height:1.3;}
+.vcard .zh{font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:var(--ink-60);margin-top:5px;display:none;}
+.vcard .ex{font-family:"Noto Sans TC",sans-serif;font-size:11px;color:var(--ink-38);margin-top:6px;line-height:1.5;display:none;font-style:italic;}
+.vcard.flip .zh,.vcard.flip .ex{display:block;}
+.vcard .spk{
+  position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;
+  border:1.2px solid var(--ink-38);background:none;color:var(--ink);font-size:11px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.hint{font-size:11px;color:var(--ink-38);margin-bottom:14px;}
+
+/* ── dialogue ── */
+.dayhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px;flex-wrap:wrap;}
+.togglezh{
+  font-family:"Bai Jamjuree",sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;
+  border:1.4px solid var(--ink-38);border-radius:999px;background:none;color:var(--ink);
+  padding:6px 13px;cursor:pointer;flex:none;
+}
+.togglezh.off{opacity:.5;}
+.convo{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+.bub-row{display:flex;gap:8px;}
+.bub-row.you{justify-content:flex-end;}
+.bub-row.you .bub{align-items:flex-end;}
+.bub{
+  max-width:78%;display:flex;flex-direction:column;gap:2px;
+}
+.who{font-family:"Bai Jamjuree",sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;
+  color:var(--ink-38);text-transform:uppercase;margin-bottom:2px;}
+.bub-row.you .who{text-align:right;}
+.bub .en{
+  font-family:"Noto Sans TC",sans-serif;font-size:14.5px;font-weight:500;line-height:1.5;
+  border:1.4px solid var(--ink-18);border-radius:14px;padding:9px 13px;position:relative;
+}
+.bub-row.friend .en{border-top-left-radius:3px;}
+.bub-row.you .en{border-top-right-radius:3px;background:var(--ink-08);}
+.bub .zh{font-family:"Noto Sans TC",sans-serif;font-size:11.5px;color:var(--ink-60);padding:0 13px;}
+.bub-row.you .zh{text-align:right;}
+.body.hidezh .zh{display:none;}
+.spk-line{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;border-radius:50%;border:1px solid var(--ink-38);
+  background:none;color:var(--ink);font-size:9px;cursor:pointer;margin-left:6px;vertical-align:middle;
+}
+
+/* ── footer ── */
+.back{
+  display:block;text-align:center;margin-top:40px;padding-top:20px;
+  border-top:var(--hair) solid var(--ink-18);font-size:12px;color:var(--ink-60);text-decoration:none;
+}
+::selection{background:var(--ink);color:var(--paper);}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../">← SEOUL<small>回主手冊</small></a>
+    <button class="iconbtn" id="modeBtn" type="button" aria-label="切換明暗">◐</button>
+  </div>
+</div>
+
+<div class="tabbar">
+  <div class="tabbar-in" id="tabbar"></div>
+</div>
+
+<div class="wrap" id="wrap"></div>
+
+<script>
+const VOCAB = [
+["交通", [
+  ["airport","機場","We need to get to the airport by 6 AM."],
+  ["boarding pass","登機證","Please have your boarding pass ready."],
+  ["departure gate","登機門","Our departure gate is 25, near the food court."],
+  ["immigration","入境審查","Immigration only took ten minutes this time."],
+  ["security check","安檢","Security check was faster than I expected."],
+  ["luggage","行李","I only brought one piece of luggage."],
+  ["baggage claim","行李提領","Let's meet at baggage claim after we land."],
+  ["subway","地鐵","The subway is the easiest way to get around Seoul."],
+  ["transfer","轉乘","You need to transfer at the next station."],
+  ["platform","月台","Which platform does the train leave from?"],
+  ["one-way ticket","單程票","I bought a one-way ticket to the airport."],
+  ["reserved seat","指定座","This train only has reserved seats, no standing."],
+  ["last train","末班車","We can't miss the last train tonight."],
+  ["taxi fare","計程車費","The taxi fare was cheaper than I thought."],
+]],
+["住宿", [
+  ["guesthouse","民宿","I'm staying at a small guesthouse in Hongdae."],
+  ["check-in","入住登記","Check-in isn't until 3 PM."],
+  ["check-out","退房","We have to check out before 11 AM."],
+  ["reservation","預約","I made a reservation online last week."],
+  ["deposit","訂金","They asked for a small deposit to hold the room."],
+  ["front desk","櫃檯","Just ask the front desk if you need anything."],
+  ["luggage storage","行李寄放","The guesthouse offered free luggage storage."],
+  ["neighborhood","街區","It's a quiet, cozy neighborhood."],
+]],
+["飲食", [
+  ["menu","菜單","Can I see the menu, please?"],
+  ["order","點餐","Are you ready to order?"],
+  ["bill / check","帳單","Could we get the bill, please?"],
+  ["receipt","收據","Don't forget to keep the receipt."],
+  ["spicy","辣的","This dish is really spicy, be careful."],
+  ["delicious","好吃的","Everything here is so delicious."],
+  ["portion","份量","The portion size here is huge."],
+  ["takeout","外帶","Let's just get takeout tonight."],
+  ["dessert","甜點","Save some room for dessert."],
+  ["beverage","飲料","The entrance fee includes one beverage."],
+  ["allergic","過敏的","I'm allergic to shellfish."],
+  ["recommend","推薦","What would you recommend here?"],
+  ["popular","熱門的","This restaurant is really popular with locals."],
+  ["street food","街頭小吃","We tried a lot of street food at the market."],
+  ["leftovers","剩菜","We can take the leftovers with us."],
+  ["reservation required","需要預約","This place has a reservation required policy."],
+]],
+["購物", [
+  ["discount","折扣","I got a nice discount with this coupon."],
+  ["coupon","優惠券","Did you download the coupon before you went?"],
+  ["cash","現金","Some small shops only accept cash."],
+  ["credit card","信用卡","Luckily they accepted my credit card."],
+  ["price","價格","The price was higher than I expected."],
+  ["size","尺寸","Do you have this in a smaller size?"],
+  ["fitting room","試衣間","The fitting room is at the back of the store."],
+  ["refund","退款","I asked for a refund because it didn't fit."],
+  ["sold out","賣完了","That color was already sold out."],
+  ["souvenir","紀念品","I bought some souvenirs for my family."],
+]],
+["醫美", [
+  ["clinic","診所","The clinic was easy to find near the subway exit."],
+  ["consultation","諮詢","The consultation itself was free."],
+  ["procedure","療程","I decided to try a lifting procedure."],
+  ["numbing cream","麻醉藥膏","They applied numbing cream before starting."],
+  ["swelling","腫脹","Some swelling is normal after the treatment."],
+  ["filler","填充劑","I got a small amount of filler for my smile lines."],
+  ["lifting","拉提","The lifting treatment focuses on the jawline."],
+  ["aftercare","術後照護","Please follow the aftercare instructions."],
+  ["appointment","預約看診","My appointment was at two thirty."],
+  ["side effect","副作用","Redness is a common short-term side effect."],
+  ["budget","預算","I went a bit over my budget, honestly."],
+  ["insurance","保險","Travel insurance gave me peace of mind."],
+]],
+["跳舞", [
+  ["social dance","社交舞","It was my first time at a social dance event."],
+  ["beginner","初學者","Don't worry, beginners are always welcome."],
+  ["dance partner","舞伴","You don't need to bring your own dance partner."],
+  ["rhythm","節奏","It took me a while to catch the rhythm."],
+  ["lesson","課程","There's a free beginner lesson before the party."],
+  ["cover charge","入場費","The cover charge includes one drink."],
+  ["drink ticket","飲料兌換券","I used my drink ticket at the bar."],
+  ["dance floor","舞池","The dance floor got crowded after nine."],
+  ["instructor","老師","The instructor was really patient with beginners."],
+  ["practice","練習","I need more practice before I feel confident."],
+]],
+["韓服文化", [
+  ["traditional dress","傳統服飾","Hanbok is Korea's traditional dress."],
+  ["rental","租借","We chose a two-hour rental package."],
+  ["photo shoot","拍照","The palace is a popular spot for photo shoots."],
+  ["palace","宮殿","Gyeongbokgung is the most famous palace in Seoul."],
+  ["royal guard","守門將","We watched the royal guard changing ceremony."],
+  ["ceremony","儀式","The ceremony happens twice a day."],
+  ["free admission","免費入場","Wearing hanbok gets you free admission."],
+  ["custom","習俗","It's an old custom that's still popular today."],
+  ["tradition","傳統","I love learning about local traditions."],
+  ["cultural experience","文化體驗","It was such a meaningful cultural experience."],
+]],
+["景點自然", [
+  ["island","島","Nami Island is a popular day-trip spot."],
+  ["ferry","渡輪","The ferry ride only takes a few minutes."],
+  ["bike rental","租腳踏車","Bike rental is available near the entrance."],
+  ["scenery","風景","The scenery along the tree-lined path is beautiful."],
+  ["hiking trail","健行步道","There's a short hiking trail near the tower."],
+  ["viewpoint","觀景點","We stopped at a viewpoint to take photos."],
+  ["tower","塔","You can see the whole city from the tower."],
+  ["park","公園","There's a nice park near my guesthouse."],
+  ["riverside","河岸","We walked along the riverside in the evening."],
+  ["map","地圖","I always keep a map open on my phone."],
+]],
+["日常小聊", [
+  ["weather","天氣","The weather has been really humid lately."],
+  ["humid","潮濕的","August in Seoul is hot and humid."],
+  ["tired","累的","I'm so tired after walking all day."],
+  ["excited","興奮的","I'm really excited for tonight's dance party."],
+  ["nervous","緊張的","I felt a little nervous before my first class."],
+  ["exhausted","精疲力竭的","I was completely exhausted by the end of the trip."],
+  ["jet lag","時差","I still haven't recovered from jet lag."],
+  ["friendly","友善的","Everyone in the dance community was so friendly."],
+  ["amazing","令人驚艷的","The whole experience was amazing."],
+  ["unforgettable","難忘的","This trip was truly unforgettable."],
+]],
+];
+
+const DIALOGUES = {
+  d0825:{title:"8/25 · 落地弘大", lines:[
+    ["friend","Hey! How was your flight to Seoul?","嘿！飛首爾的班機還順利嗎？"],
+    ["you","It was fine, but we landed a bit late, around 9:15 PM.","還不錯，不過晚了一點降落，大概晚上 9:15。"],
+    ["friend","Did you have any trouble at immigration?","入境審查有遇到麻煩嗎？"],
+    ["you","No, it was smooth. I filled out the e-Arrival Card online before I left.","沒有，很順利。我出發前先在網路上填好電子入境卡了。"],
+    ["friend","Smart move! What did you do after landing?","真聰明！落地後你做了什麼？"],
+    ["you","I bought a T-money card at the airport convenience store first.","我先在機場便利商店買了一張 T-money 卡。"],
+    ["friend","Good idea, you'll need that a lot in Seoul. How did you get to your guesthouse?","不錯的主意，在首爾很常用到。你怎麼去民宿的？"],
+    ["you","I took the AREX train to Hongdae Station, it took about an hour.","我搭 AREX 到弘大入口站，大概花了一小時。"],
+    ["friend","Was it easy to find your guesthouse from there?","從那邊找民宿容易嗎？"],
+    ["you","Yes, it's only a 10-minute walk from the station.","很容易，從車站走過去只要十分鐘。"],
+    ["friend","Did you tell the guesthouse you'd arrive late?","你有跟民宿說會晚到嗎？"],
+    ["you","Definitely, I messaged them in advance so someone would be there.","當然，我提前傳訊息，確保有人在。"],
+    ["friend","What's the guesthouse like?","民宿長什麼樣子？"],
+    ["you","It's an old traditional house that's been renovated, really cozy.","是一間整修過的老房子，很有味道、很舒服。"],
+    ["friend","Sounds lovely! Are you staying in Hongdae the whole trip?","聽起來很棒！整趟都住在弘大嗎？"],
+    ["you","Yes, three nights, then the last night I'll sleep at the airport.","對，住三晚，最後一晚會在機場過夜。"],
+    ["friend","Wow, a red-eye departure plan?","哇，紅眼班機出發計畫？"],
+    ["you","Exactly, my flight home is early morning on the 29th.","沒錯，我 29 號一早就要搭機回去了。"],
+    ["friend","That's a packed schedule! What's first on your list tomorrow?","行程排得很滿耶！明天第一站是什麼？"],
+    ["you","Hanbok rental and a visit to Gyeongbokgung Palace!","租韓服，然後去景福宮！"],
+  ]},
+  d0826:{title:"8/26 · 韓服景福宮醫美 Swing", lines:[
+    ["friend","So today's the hanbok day! How did it go?","今天是韓服日！狀況怎麼樣？"],
+    ["you","It was fun, but the rental time was shorter than I expected.","很好玩，不過租借時間比我想的短。"],
+    ["friend","What do you mean?","怎麼說？"],
+    ["you","I thought I booked 4 hours, but it was actually only 3.","我以為訂了 4 小時，結果其實只有 3 小時。"],
+    ["friend","Oh no, did that mess up your schedule?","天啊，這樣打亂行程了嗎？"],
+    ["you","A little, I had less time for photos at the palace than planned.","有一點，在宮殿拍照的時間比原本規劃的少。"],
+    ["friend","Did you see the changing of the guard ceremony?","你有看到守門將換崗儀式嗎？"],
+    ["you","Yes! It happened right in my photo window, lucky timing.","有！剛好在我拍照的時段發生，運氣很好。"],
+    ["friend","What did you do after returning the hanbok?","還完韓服之後你做了什麼？"],
+    ["you","I went to a clinic in Myeongdong for a skin consultation.","我去明洞的診所做皮膚諮詢。"],
+    ["friend","How was the consultation?","諮詢結果怎麼樣？"],
+    ["you","I ended up spending more than my budget, almost 24% over.","我最後花超過預算了，多了將近 24%。"],
+    ["friend","What treatments did you get?","妳做了什麼療程？"],
+    ["you","A lifting procedure and a filler for my nasolabial folds.","一個拉提療程，還有法令紋填充劑。"],
+    ["friend","I hope it's worth it! What about tonight?","希望值得！那今晚呢？"],
+    ["you","I'm going to a swing dance social in Itaewon.","我要去梨泰院參加搖擺舞社交場。"],
+    ["friend","Have you ever danced swing before?","妳跳過搖擺舞嗎？"],
+    ["you","Never, but there's a free beginner class before the social dance.","從沒跳過，不過社交場前有免費的初學者課程。"],
+    ["friend","That sounds exciting! Are you nervous?","聽起來很刺激！會緊張嗎？"],
+    ["you","A little, but everyone says the community is really friendly to beginners.","有一點，不過大家都說這個社群對新手很友善。"],
+  ]},
+  d0827:{title:"8/27 · 南怡島 Hong Turn", lines:[
+    ["friend","Tell me about your day trip to Nami Island!","跟我說說南怡島一日遊！"],
+    ["you","It was beautiful, but the train schedule was a bit stressful.","很美，不過火車班次讓我有點緊張。"],
+    ["friend","What happened?","發生什麼事了？"],
+    ["you","My target return train was full, so I had to wait for a later one.","我目標的回程車滿了，只好等下一班。"],
+    ["friend","Did that cause any problems?","這有造成什麼問題嗎？"],
+    ["you","I got back to my guesthouse about thirty minutes later than planned.","我回到民宿的時間比計畫晚了大約三十分鐘。"],
+    ["friend","What's Nami Island actually like?","南怡島實際上是什麼樣子？"],
+    ["you","It has a famous tree-lined path, really scenic for photos.","那裡有一條有名的林蔭步道，很適合拍照。"],
+    ["friend","Did you rent a bike there?","妳有在那邊租腳踏車嗎？"],
+    ["you","I considered it, but I mostly just walked around.","有考慮過，不過我大部分時間都用走的。"],
+    ["friend","How did you get to the island from Seoul?","妳怎麼從首爾到島上的？"],
+    ["you","I took the ITX train to Gapyeong, then a short taxi to the ferry pier.","我搭 ITX 到加平，再搭一小段計程車到渡船口。"],
+    ["friend","Was the ferry ticket expensive?","渡輪票貴嗎？"],
+    ["you","Not really, I booked a combo ticket online beforehand.","還好，我事先在網路上訂了套票。"],
+    ["friend","What are you doing tonight?","今晚要做什麼？"],
+    ["you","I'm going to a Latin dance club called Hong Turn.","我要去一間叫 Hong Turn 的拉丁舞俱樂部。"],
+    ["friend","Salsa or bachata?","騷莎還是巴恰塔？"],
+    ["you","Tonight is Bachata Day, so mostly bachata.","今晚是巴恰塔日，主要是巴恰塔。"],
+    ["friend","Have you tried bachata before?","妳跳過巴恰塔嗎？"],
+    ["you","A little bit, I'm excited to practice more tonight.","跳過一點點，很期待今晚多練習。"],
+  ]},
+  d0828:{title:"8/28 · 南山咖啡 猛男秀", lines:[
+    ["friend","What's your plan for today, your last full day?","妳最後一整天的計畫是什麼？"],
+    ["you","I'm working remotely from a cafe near Namsan this morning.","今早我要在南山附近的咖啡廳遠距工作。"],
+    ["friend","A cafe for work? Does it have outlets?","去咖啡廳工作？有插座嗎？"],
+    ["you","Yes, I checked in advance, it's known for being laptop-friendly.","有，我先查過了，那間以適合帶筆電工作出名。"],
+    ["friend","How long are you staying there?","妳會待多久？"],
+    ["you","About six hours, until 3:20 in the afternoon.","大概六小時，待到下午三點二十分。"],
+    ["friend","What's after that?","那之後呢？"],
+    ["you","I'm going to a show called Wild Wild, it's a male revue.","我要去看一場叫 Wild Wild 的猛男秀。"],
+    ["friend","That sounds fun! What time does it start?","聽起來很好玩！幾點開始？"],
+    ["you","The show starts at 4 PM, so I need to hurry a bit after the cafe.","四點開演，所以離開咖啡廳後要趕一下。"],
+    ["friend","Did you already do your grocery shopping?","妳已經去超市買東西了嗎？"],
+    ["you","Yes, actually I did that last night after getting back from Nami Island.","對，其實昨晚從南怡島回來後就買好了。"],
+    ["friend","Smart, one less thing to worry about today.","真聰明，今天就少一件事要煩惱。"],
+    ["you","Exactly! After the show, I'll just walk around Namsan and have dinner.","沒錯！看完秀後，我會在南山走走、吃晚餐。"],
+    ["friend","Are you going dancing again tonight?","妳今晚還會去跳舞嗎？"],
+    ["you","No, I decided to skip it because of my skin procedure.","不會，因為皮膚療程的關係我決定跳過。"],
+    ["friend","That makes sense, better to rest after the treatment.","有道理，療程後還是多休息比較好。"],
+    ["you","Right, I'm heading to the airport early instead to relax.","對，我改成提早去機場休息。"],
+    ["friend","No overnight sauna this time?","這次不去汗蒸幕過夜了嗎？"],
+    ["you","No, I canceled that too — steam isn't good for healing skin.","對，那個也取消了——蒸氣對正在恢復的皮膚不好。"],
+  ]},
+  d0829:{title:"8/29 · 回程", lines:[
+    ["friend","So you spent the night at the airport?","所以妳在機場過夜了？"],
+    ["you","Yes, I rested on a bench at the transportation center.","對，我在交通中心的長椅上休息。"],
+    ["friend","Was it comfortable?","舒服嗎？"],
+    ["you","Not really, but I brought a big scarf and an eye mask.","不太舒服，不過我帶了大披肩和眼罩。"],
+    ["friend","What time is your flight?","妳的班機幾點？"],
+    ["you","It departs at 7:55 in the morning.","早上 7:55 起飛。"],
+    ["friend","When did you check in for your flight?","妳幾點去報到的？"],
+    ["you","I checked in around 5:55, about two hours before departure.","我大概 5:55 報到，起飛前約兩小時。"],
+    ["friend","Did you pick up your groceries from storage?","妳有去領寄放的東西嗎？"],
+    ["you","I didn't need storage this time, everything was already with me.","這次不需要寄放，東西都已經在我身上了。"],
+    ["friend","How are you feeling after the whole trip?","整趟旅程下來妳感覺怎麼樣？"],
+    ["you","Exhausted, but it was such an unforgettable experience.","很累，但真的是一趟難忘的體驗。"],
+    ["friend","What was your favorite part?","妳最喜歡哪個部分？"],
+    ["you","Honestly, the swing and bachata dance nights were amazing.","老實說，搖擺舞和巴恰塔那兩晚最棒。"],
+    ["friend","Would you go back to Seoul again?","妳還會想再回首爾嗎？"],
+    ["you","Definitely, there's still so much I didn't get to see.","一定會，還有好多地方沒去到。"],
+    ["friend","Any regrets about the trip?","這趟旅程有什麼遺憾嗎？"],
+    ["you","Just that my skin treatment cost more than I budgeted.","大概就是皮膚療程花得比預算多吧。"],
+    ["friend","Well, treat yourself sometimes, right?","嗯，偶爾寵愛自己一下也不錯，對吧？"],
+    ["you","True! Thanks for listening to all my stories!","說的對！謝謝妳聽我講這麼多！"],
+  ]},
+};
+
+/* ── render ── */
+const tabs = [["vocab","單字","VOCAB"],["d0825","8/25","ARRIVE"],["d0826","8/26","HANBOK"],["d0827","8/27","NAMI"],["d0828","8/28","SHOW"],["d0829","8/29","HOME"]];
+const tabbar = document.getElementById("tabbar");
+tabs.forEach(([id,num,label])=>{
+  const b = document.createElement("button");
+  b.dataset.tab = id;
+  b.innerHTML = `<b>${num}</b><i>${label}</i>`;
+  b.onclick = ()=>go(id);
+  tabbar.appendChild(b);
+});
+
+function speak(text){
+  if(!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; u.rate = 0.92;
+  window.speechSynthesis.speak(u);
+}
+
+function renderVocab(){
+  let cats = VOCAB.map(c=>c[0]);
+  let html = `<div class="sec-head"><h2>單字量 · 100</h2><p>點卡片看中文意思跟例句，點喇叭聽發音。</p></div>`;
+  html += `<div class="catbar" id="catbar">` + cats.map((c,i)=>`<button data-cat="${i}" class="${i===0?'':''}">${c}</button>`).join('') + `</div>`;
+  VOCAB.forEach(([cat, words], ci)=>{
+    html += `<div class="cat-block" id="cat-${ci}"><h3>${cat} · ${words.length}</h3><div class="vocab-grid">`;
+    words.forEach(([en,zh,ex])=>{
+      html += `<div class="vcard" onclick="this.classList.toggle('flip')">
+        <button class="spk" onclick="event.stopPropagation();speak('${en.replace(/'/g,"\\'")}')">▶</button>
+        <div class="en">${en}</div>
+        <div class="zh">${zh}</div>
+        <div class="ex">${ex}</div>
+      </div>`;
+    });
+    html += `</div></div>`;
+  });
+  document.getElementById("wrap").innerHTML = html;
+  document.querySelectorAll("#catbar button").forEach(btn=>{
+    btn.onclick = ()=>{
+      document.getElementById(`cat-${btn.dataset.cat}`).scrollIntoView({behavior:'smooth', block:'start'});
+    };
+  });
+}
+
+function renderDay(id){
+  const d = DIALOGUES[id];
+  let html = `<div class="dayhead">
+    <div class="sec-head"><h2>${d.title}</h2><p>跟朋友來回聊天練習 · 共 ${d.lines.length} 句</p></div>
+    <button class="togglezh" id="zhToggle">隱藏中文</button>
+  </div>`;
+  html += `<div class="convo body" id="convoBody">`;
+  d.lines.forEach(([who,en,zh])=>{
+    const label = who === 'you' ? '你' : '朋友';
+    html += `<div class="bub-row ${who}">
+      <div class="bub">
+        <div class="who">${label}</div>
+        <div class="en">${en}<button class="spk-line" onclick="speak('${en.replace(/'/g,"\\'")}')">▶</button></div>
+        <div class="zh">${zh}</div>
+      </div>
+    </div>`;
+  });
+  html += `</div>`;
+  document.getElementById("wrap").innerHTML = html;
+  document.getElementById("zhToggle").onclick = ()=>{
+    const body = document.getElementById("convoBody");
+    const btn = document.getElementById("zhToggle");
+    body.classList.toggle("hidezh");
+    btn.classList.toggle("off");
+    btn.textContent = body.classList.contains("hidezh") ? "顯示中文" : "隱藏中文";
+  };
+}
+
+function go(id){
+  document.querySelectorAll(".tabbar button").forEach(b=>b.classList.toggle("on", b.dataset.tab === id));
+  if(id === "vocab") renderVocab(); else renderDay(id);
+  window.scrollTo({top:0});
+  try{ localStorage.setItem('pr_tab', id); }catch(e){}
+}
+
+/* mode toggle */
+const modeBtn = document.getElementById("modeBtn");
+function applyMode(m){
+  document.documentElement.setAttribute('data-mode', m);
+  modeBtn.textContent = m === 'dark' ? '◑' : '◐';
+}
+modeBtn.onclick = ()=>{
+  const cur = document.documentElement.getAttribute('data-mode');
+  const next = cur === 'dark' ? 'light' : 'dark';
+  applyMode(next);
+  try{ localStorage.setItem('pr_mode', next); }catch(e){}
+};
+let savedMode = 'light';
+try{ savedMode = localStorage.getItem('pr_mode') || 'light'; }catch(e){}
+applyMode(savedMode);
+
+let startTab = 'vocab';
+try{ startTab = localStorage.getItem('pr_tab') || 'vocab'; }catch(e){}
+go(startTab);
+</script>
+</body>
+</html>
